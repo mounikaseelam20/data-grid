@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="table.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="test.js"></script>
+    <h2>column master</h2>
+    <span>
+        <input type="button" id="btnAdd" value="Add column" onclick="showcolumn()">
+        <input type="button" id="btnDelete" value="Delete Selected column" onclick="removeSamplecol()">
+    </span>
+    <table id="mytable" border="1" cellspacing="2" cellpadding="10">
+        <th>Checkbox</th>
+        <th>columnname</th>
+        <th>columntype</th>
+        <th>editable</th>
+    </table>
+    <div id="coverID"> </div>
+    <div id="columnID">
+        column name:
+        <input type="text" id="cname">
+        <br/>
+        <br/> column type:
+        <select id="ctype">
+            <option>string</option>
+            <option>number</option>
+            <option>array</option>
+            <option>boolean</option>
+        </select>
+        <br/>
+        <br/> Editable:
+        <select id="cedit">
+            <option>yes</option>
+            <option>no</option>
+        </select>
+        <br/>
+        <br/>
+        <button value="ok" onclick="addSamplecol()">ok</button>
+    </div>
+    <h2>result  data grid</h2>
+     <span>
+        <input type="button" id="btnAdd" value="Add Row" onclick="fnrow()">
+        <input type="button" id="btnDelete" value="Delete Rows " onclick="removeSamplerow()">
+        <input type="button" id="btnDelete" value="export to JSON">
+
+    </span>
+    <table id="mytable2" border="1" cellspacing="2" cellpadding="10">
+     <tr id="myRow"><td></td>
+      </tr>   
+    </table>
+</body>
+
+</html>
